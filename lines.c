@@ -99,7 +99,7 @@ ssize_t _get_line(char **lineptr, size_t *n, FILE *stream)
 	else
 		return (-1);
 	input = 0;
-	buffer = malloc(si(char) * 120);
+	buffer = malloc(si(char) * 60*2);
 	if (!buffer)
 		return (-1);
 	while (c != '\n')

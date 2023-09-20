@@ -1,6 +1,7 @@
 #ifndef philo
 #define philo
 #define si(x) sizeof(x)
+#define NT '\0'
  #include <fcntl.h>
 #include <signal.h>
 #include <sys/types.h>

@@ -73,7 +73,7 @@ char *fill_path_dir(char *path)
 	{
 		if (path[i] == ':')
 		{
-			if (path[i + 1] == ':' || i == 0 || path[i + 1] == '\0')
+			if (path[i + 1] == ':' || i == 0 || path[i + 1] == NT)
 				length += _strlen(pwd) + 1;
 			else
 				length++;
@@ -84,7 +84,7 @@ char *fill_path_dir(char *path)
 	path_c = malloc(si(char) * (length + 1));
 	if (!path_c)
 		return (N);
-	path_c[0] = '\0';
+	path_c[0] = NT;
 	for (i = 0; path[i]; i++)
 	{
 		if (path[i] == ':')
@@ -94,7 +94,7 @@ char *fill_path_dir(char *path)
 				_strcat(path_c, pwd);
 				_strcat(path_c, ":");
 			}
-			else if (path[i + 1] == ':' || path[i + 1] == '\0')
+			else if (path[i + 1] == ':' || path[i + 1] == NT)
 			{
 				_strcat(path_c, ":");
 				_strcat(path_c, pwd);
@@ -142,7 +142,7 @@ int proc_file_commands(char *file_path, int *exe_return)
 		b_read = read(file, buffer, 119);
 		if (b_read == 0 && line_s == 0)
 			return (*exe_return);
-		buffer[b_read] = '\0';
+		buffer[b_read] = NT;
 		line_s += b_read;
 		line = _realloc(line, old_size, line_s);
 		_strcat(line, buffer);

@@ -10,7 +10,7 @@
  */
 unsigned int is_delim(char c, char *delim)
 {
-	while (*delim != '\0')
+	while (*delim != NT)
 	{
 		if (c == *delim)
 			return (1);
@@ -33,26 +33,26 @@ char *my_strtok(char *line, char *delim)
 
 	if (line != N)
 		strr = line;
-	for (; *strr != '\0'; strr++)
+	for (; *strr != NT; strr++)
 	{
-		for (j = 0; delim[j] != '\0'; j++)
+		for (j = 0; delim[j] != NT; j++)
 		{
 			if (*strr == delim[j])
 			break;
 		}
-		if (delim[j] == '\0')
+		if (delim[j] == NT)
 			break;
 	}
 	copystr = strr;
-	if (*copystr == '\0')
+	if (*copystr == NT)
 		return (N);
-	for (; *strr != '\0'; strr++)
+	for (; *strr != NT; strr++)
 	{
-		for (j = 0; delim[j] != '\0'; j++)
+		for (j = 0; delim[j] != NT; j++)
 		{
 			if (*strr == delim[j])
 			{
-				*strr = '\0';
+				*strr = NT;
 				strr++;
 				return (copystr);
 			}
@@ -143,7 +143,7 @@ char **_strtok(char *line, char *delim)
 			idx++;
 		}
 
-		ptr[t][l] = '\0';
+		ptr[t][l] = NT;
 	}
 	ptr[t] = N;
 	ptr[t + 1] = N;

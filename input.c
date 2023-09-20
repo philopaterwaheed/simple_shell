@@ -47,7 +47,7 @@ char *get_input(char *input, int *philo_retunn)
 	/*
 	 * terminating the line with N
 	 */
-	input[inputed - 1] = '\0';
+	input[inputed - 1] = NT;
 	handle_line(&input, inputed);
 	
 	return(input);
@@ -211,7 +211,7 @@ char *get_args(char *line, int *exe_return)
 		return (get_args(line, exe_return));
 	}
 
-	line[-1 + inputed] = '\0';
+	line[-1 + inputed] = NT;
 	handle_line(&line, inputed);
 
 	return (line);

@@ -13,12 +13,12 @@ char *_strcat(char *destination, const char *srcoure)
 	destTmp = destination;
 	srcTmp =  srcoure;
 
-	while (*destTmp != '\0')
+	while (*destTmp != NT)
 		destTmp++;
 
-	while (*srcTmp != '\0')
+	while (*srcTmp != NT)
 		*destTmp++ = *srcTmp++;
-	*destTmp = '\0';
+	*destTmp = NT;
 	return (destination);
 }
 /**
@@ -34,9 +34,9 @@ char *_strncat(char *destination, const char *src, size_t n)
 	size_t dest_ln = _strlen(destination);
 	size_t i;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	for (i = 0; i < n && src[i] != NT; i++)
 		destination[dest_ln + i] = src[i];
-	destination[dest_ln + i] = '\0';
+	destination[dest_ln + i] = NT;
 
 	return (destination);
 }

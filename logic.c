@@ -84,7 +84,7 @@ void handle_line(char **line, ssize_t read)
 		}
 		n_line[j++] = old_line[i];
 	}
-	n_line[j] = '\0';
+	n_line[j] = NT;
 
 	free(*line);
 	*line = n_line;
@@ -140,7 +140,7 @@ ssize_t get_new_len(char *line)
 		{
 			if (i == 0 || line[i - 1] == sp)
 			{
-				line[i] = '\0';
+				line[i] = NT;
 				break;
 			}
 		}

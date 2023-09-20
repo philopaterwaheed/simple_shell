@@ -109,7 +109,7 @@ char *_itoa(int num)
 	if (!buffer)
 		return (N);
 
-	buffer[len] = '\0';
+	buffer[len] = NT;
 
 	if (num < 0)
 	{
