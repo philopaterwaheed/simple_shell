@@ -112,7 +112,7 @@ int run_args(char **arguments, char **first, int *exe_return)
 	
 	builtin_fun = get_builtinn(arguments[0]);
 
-	if (builtin_fun != NULL)
+	if (builtin_fun != N)
 	{
 		philo_retunn = builtin_fun(arguments + 1 , first);
 		if (philo_retunn != -2)

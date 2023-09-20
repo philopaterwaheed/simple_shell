@@ -55,7 +55,7 @@ char *str_duplicate(char *string)
 
 	length = _strlen(string) + 1;
 
-	result = malloc(sizeof(char) * length);
+	result = malloc(si(char) * length);
 
 	if (result == N)
 	{

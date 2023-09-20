@@ -41,14 +41,14 @@ char *error_126(char **arguments)
 
 	hist_str = _itoa(hs);
 	if (!hist_str)
-		return (NULL);
+		return (N);
 
 	len = _strlen(name) + _strlen(hist_str) + _strlen(arguments[0]) + 24;
 	error = malloc(si(char) * (len + 1));
 	if (!error)
 	{
 		free(hist_str);
-		return (NULL);
+		return (N);
 	}
 
 	_strcpy(error, name);
@@ -74,14 +74,14 @@ char *error_127(char **arguments)
 
 	hist_str = _itoa(hs);
 	if (!hist_str)
-		return (NULL);
+		return (N);
 
 	len = _strlen(name) + _strlen(hist_str) + _strlen(arguments[0]) + 16;
 	error = malloc(si(char) * (len + 1));
 	if (!error)
 	{
 		free(hist_str);
-		return (NULL);
+		return (N);
 	}
 
 	_strcpy(error, name);
@@ -107,7 +107,7 @@ char *_itoa(int num)
 
 	buffer = malloc(si(char) * (len + 1));
 	if (!buffer)
-		return (NULL);
+		return (N);
 
 	buffer[len] = '\0';
 

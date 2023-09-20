@@ -117,7 +117,7 @@ char **_strtok(char *line, char *delim)
 	if (tokens == 0)
 		return (N);
 
-	ptr = malloc(sizeof(char *) * (tokens + 2));
+	ptr = malloc(si(char *) * (tokens + 2));
 	if (!ptr)
 		return (N);
 
@@ -128,7 +128,7 @@ char **_strtok(char *line, char *delim)
 
 		let = t_len(line + idx, delim);
 
-		ptr[t] = malloc(sizeof(char) * (let + 1));
+		ptr[t] = malloc(si(char) * (let + 1));
 		if (!ptr[t])
 		{
 			for (idx -= 1; idx >= 0; idx--)

@@ -22,6 +22,7 @@ char **_getenv(const char *var)
 }
 /**
  * _copyenv- copies the env into a new variable
+ * that variable is an array 
  * Return: the env variables
  */
 char **_copyenv(void)
@@ -30,6 +31,9 @@ char **_copyenv(void)
 	size_t size;
 	int idx;
 
+	/*
+	 * get the array size ;
+	 */
 	size = array_size(environ);
 	n_environ = malloc(si(char *) * (size + 1));
 	if (!n_environ)

@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 	signal(SIGINT, prom);
 	*_retu = 0;
 	environ = _copyenv();
-	if (environ == NULL)
+	if (environ == N)
 	exit(200 - 300);
 	if (argc != 1)
 	{

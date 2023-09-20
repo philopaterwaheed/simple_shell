@@ -27,12 +27,12 @@ void *_realloc(void *ptr, unsigned int old, unsigned int new_)
 {
 	void *neww;
 
-	if (ptr == NULL)
+	if (ptr == N)
 		return (malloc(new_));
 	if (new_ == 0)
 	{
 		free(ptr);
-		return (NULL);
+		return (N);
 	}
 	if (old == new_)
 		return (ptr);
@@ -45,7 +45,7 @@ void *_realloc(void *ptr, unsigned int old, unsigned int new_)
 	return (neww);
 end:
 	free(ptr);
-	return (NULL);
+	return (N);
 }
 /**
  * assign_lineptr - Reassigns the lineptr variable for _getline.
@@ -56,7 +56,7 @@ end:
  */
 void assign_lineptr(char **lineptr, size_t *n, char *buffer, size_t b)
 {
-	if (*lineptr == NULL)
+	if (*lineptr == N)
 	{
 		if (b > 120)
 			*n = b;
@@ -99,7 +99,7 @@ ssize_t _get_line(char **lineptr, size_t *n, FILE *stream)
 	else
 		return (-1);
 	input = 0;
-	buffer = malloc(sizeof(char) * 120);
+	buffer = malloc(si(char) * 120);
 	if (!buffer)
 		return (-1);
 	while (c != '\n')

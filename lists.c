@@ -24,19 +24,19 @@ void free_list(linked_list *head)
  */
 linked_list *add_node_end(linked_list **head, char *node)
 {
-	linked_list *new_node = malloc(sizeof(linked_list));
+	linked_list *new_node = malloc(si(linked_list));
 	linked_list *last;
 
 	if (!new_node)
-		return (NULL);
+		return (N);
 
 	new_node->dir = node;
-	new_node->next = NULL;
+	new_node->next = N;
 
 	if (*head)
 	{
 		last = *head;
-		while (last->next != NULL)
+		while (last->next != N)
 			last = last->next;
 		last->next = new_node;
 	}

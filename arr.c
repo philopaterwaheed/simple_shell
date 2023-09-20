@@ -8,7 +8,7 @@ int array_size(char **array)
 {
 	int size = 0;
 
-	while (array[size] != NULL)
+	while (array[size] != N)
 	{
 		size++;
 	}
