@@ -1,4 +1,8 @@
 #include "main.h"
+/**
+ * get_builtinn- to get the bulit in functions in the shell
+ * Return: length the array best i could get acually.
+ */
 int (*get_builtinn(char *command))(char **args, char **front)
 {
 	builtin_ funcs[] = {

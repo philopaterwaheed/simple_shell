@@ -2,7 +2,7 @@
 /**
  * array_size - length of an array of char**
  * @array: the string.
- * Return: length the array.
+ * Return: length the array best i could get acually.
  */
 int array_size(char **array)
 {
